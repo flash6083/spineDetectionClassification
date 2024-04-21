@@ -1,0 +1,39 @@
+# Virtual Environment
+myenv/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment files
+.myenv
+.myenv.*
+
+# Database files
+*.sqlite3
+
+# Log files
+*.log
+
+# Editor files
+.vscode/
+.idea/
+
+# Compiled output
+dist/
+tmp/
+out-tsc/
+bazel-out/
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Angular
+.angular/
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
