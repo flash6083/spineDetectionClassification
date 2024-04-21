@@ -1,12 +1,7 @@
-from waitress import serve
-
 from app import create_app
 
 app = create_app()
 
 if __name__ == '__main__':
-    print("hello from main app")
-    app.run(debug=True)
-
-
-serve(app, host='0.0.0.0', port=8080)
+    print("Server running on http://127.0.0.1:8080")
+    app.run(debug=True, host='0.0.0.0', port=8080)

@@ -14,7 +14,7 @@ This repository contains a Flask-based server for object detection and classific
 
 1. Clone the repository:
 - `git clone https://github.com/flash6083/spineDetectionClassification.git`
-- `cd SpineDetectionAndClassification`
+- `cd spineDetectionClassification`
 
 2. Create a virtual environment and activate it:
 - `python -m venv myenv`
