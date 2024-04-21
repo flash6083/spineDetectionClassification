@@ -1,3 +1,5 @@
+import os
+
 from ultralytics import YOLO
 
 
@@ -11,7 +13,8 @@ def detect_objects_on_image(buf):
     :return: Array of bounding boxes in format 
     [[x1,y1,x2,y2,object_type,probability],..]
     """
-    model = YOLO("best.pt")
+    model_path = os.path.join(os.path.dirname(__file__), 'best.pt')
+    model = YOLO(model_path)
     results = model.predict(buf)
     result = results[0]
     output = []
