@@ -1,5 +1,6 @@
 import os
 
+from PIL import Image
 from ultralytics import YOLO
 
 
@@ -28,3 +29,17 @@ def detect_objects_on_image(buf):
             x1, y1, x2, y2, result.names[class_id], prob
         ])
     return output
+
+
+def extract_spine_images(image, bounding_boxes):
+    spine_images = []
+
+    for bbox in bounding_boxes:
+        x1, y1, x2, y2 = bbox
+
+        # Crop the spine head image from the original image
+        # Image.crop(image, (x1, y1, x2, y2))
+        spine_image = image.crop((x1, y1, x2, y2))
+
+        spine_images.append(spine_image)
+    return spine_images
